@@ -1,0 +1,13 @@
+<view class="container" style="background:#fff">  
+    <text style="color:red;margin:20px">{{title}}</text>
+    <view style="width:90%">
+        <view style="display:flex;flex-direction:row;">
+            <image style="width:18px;height:18px;margin:5px"  src="/image/shizhong.png" background-size="cover"></image>
+            <text style="font-size:16px;margin:5px">2016年12月23日周五 08:30-09:30</text>
+        </view>
+        <view style="display:flex;flex-direction:row;">
+            <image style="width:18px;height:18px;margin:5px"  src="/image/renwu.png" background-size="cover"></image>
+            <text style="font-size:16px;margin:5px">dengchongyuan</text>
+        </view>
+    </view>
+</view>

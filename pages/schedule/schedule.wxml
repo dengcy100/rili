@@ -1,0 +1,59 @@
+<view class="container" style="background:#fff">  
+    <view class="container-hang" style="margin-top:23rpx;width:auto">  
+        <text wx:for="{{dateTitles}}" wx:for-item="dateItem" class="cellDate"  
+        style="width:{{titleCellWidth}}px;padding:6rpx 0 6rpx 0">{{dateItem}}</text>  
+    </view>  
+      
+    <swiper bindchange="swiperChange" class="swipter-box" duration="300" style="height:{{swiperHeight}}rpx">  
+        <swiper-item wx:for="{{monthDatas}}" wx:for-item="monthData">  
+  
+            <view class="cell-box" wx:for="{{monthData.dataHarr}}" wx:for-index="i">  
+                <view wx:for="{{[0, 1, 2, 3, 4, 5, 6]}}" wx:for-index="j">  
+                    <view class="contentDate" style="width:{{dateCellWidth}}px;height:{{dateCellHeight}}rpx">  
+                        <view class="type_no_1_pad" wx:if="{{monthData.data[i*7 + j].type == -1}}">  
+                            <text class="type_no_1">{{monthData.data[i*7 + j].dateShow}}</text>  
+                        </view>  
+                        <view class="type_1_pad" wx:if="{{monthData.data[i*7 + j].type == 1}}">  
+                            <text class="type_1">{{monthData.data[i*7 + j].dateShow}}</text>  
+                        </view>  
+                        <view class="type_2_pad" wx:if="{{monthData.data[i*7 + j].type == 2}}">  
+                            <text class="type_2">{{monthData.data[i*7 + j].dateShow}}</text>  
+                        </view>  
+                    </view>  
+                </view>  
+            </view>  
+  
+  
+        </swiper-item>  
+    </swiper>  
+  
+    <text style="width:{{windowWidth}}px;height:2rpx;background-color:#bdbdbd" />  
+    <view style="width:90%;padding:20px;">
+        <view style="font-size:14px;border-left:3px solid red;padding-left:5px;margin:10px 10px 10px 20px">
+            我的日程
+        </view>
+        <view wx:for="{{[0,1,2,3,4,5,6]}}">
+            <navigator url="../event/event?title=处理邮件" hover-class="navigator-hover">
+                <view style="display:flex;flex-direction:row;justify-content:space-between;padding:10px;border-top:1px solid #cccccc">
+                    <view>
+                        <text style="color:red">·</text>
+                        <text style="font-size:14px;">08:30-09:30 处理邮件</text>
+                    </view>
+                    <text style="font-size:14px;color:#cccccc;margin-right:10px">></text>
+                </view>
+            </navigator>            
+        </view>
+        <navigator url="../event/event?title=开周会" hover-class="navigator-hover">
+            <view style="display:flex;flex-direction:row;justify-content:space-between;padding:10px;border-top:1px solid #cccccc">
+                <view>
+                    <text style="color:red">·</text>
+                    <text style="font-size:14px;">09:30-10:30 开周会</text>
+                </view>
+                <text style="font-size:14px;color:#cccccc;margin-right:10px">></text>
+            </view>
+        </navigator>
+      
+        <view style="display:flex;flex-direction:row;justify-content:space-between;padding:10px;border-top:1px solid #cccccc">
+        </view>
+    </view> 
+</view> 

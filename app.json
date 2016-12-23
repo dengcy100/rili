@@ -1,0 +1,39 @@
+{
+  "pages":[
+    
+    "pages/schedule/schedule",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/event/event",
+    "pages/setting/setting"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+        "color": "gray",
+        "selectedColor": "red",
+        "borderStyle": "white",
+        "backgroundColor": "#ffffff",
+        "list": [{
+                 "pagePath": "pages/schedule/schedule",
+                 "iconPath": "image/0225chooseD.png",
+                 "selectedIconPath": "image/0225chooseS.png",
+                 "text": "我的日程"
+                 }, {
+                 "pagePath": "pages/index/index",
+                 "iconPath": "image/0226courseD.png",
+                 "selectedIconPath": "image/0226courseS.png",
+                 "text": "他人日程"
+                 },  {
+                 "pagePath": "pages/setting/setting",
+                 "iconPath": "image/0225mineD.png",
+                 "selectedIconPath": "image/0225mineS.png",
+                 "text": "个人设置"
+                 }]
+    },
+    "debug": true
+}
